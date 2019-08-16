@@ -27,7 +27,7 @@ function Router() {
               <NavLink to="/gallery/seashells">Seashells</NavLink>
             </li>
             <li>
-              <NavLink to="/gallery/egytian%20sculptures">Egyptian Sculptures</NavLink>
+              <NavLink to="/gallery/floetry">Floetry</NavLink>
             </li>
             <li>
               <NavLink to="/gallery/ocean%20waves">Ocean Waves</NavLink>
