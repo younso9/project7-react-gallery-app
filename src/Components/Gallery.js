@@ -48,23 +48,10 @@ class Gallery extends Component {
   //construct the photo URI for this particular JSON photo item: use the flickr format, display using the Photo Component
   mapJsonToPhotoComponents = (photo, i) => {
     let uri = '';
-    /* if (photo.url_z != null)
-      uri = photo.url_z;
-    else if (photo.url_c != null)
-      uri = photo.url_c;
-    else if (photo.url_o != null)
-      uri = photo.url_o;
-    else */
+
       uri = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`;
     return <Photo src={uri} key={i}/>;
   }
-
-  /*
-  mapJsonToPhotoComponents = (photo) => {
-    const uri = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_z.jpg`;
-    return <Photo src={uri} />;
-  }
-  */
 
   //when the Gallery component mounts (fully loads), run fetchPhotos to get the photos for params 'type'
   //type being the text in /gallery/:type
