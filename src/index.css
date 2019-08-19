@@ -1,13 +1,15 @@
 body {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Papyrus', sans-serif;
   color: #3f4850;
+  background: linear-gradient( black, white);
 }
 
 h2 {
   font-size: 2em;
   margin: 52px 0 40px;
   text-transform: capitalize;
+  color: #fa4bb1
 }
 
 ul {
@@ -27,7 +29,7 @@ a {
 
 .search-form button {
   outline: none;
-  background-color: #438bbd;
+  background-color: #fa4bb1;
   border: none;
   padding: 0px 15px;
   border-radius: 0 0.35em 0.35em 0;
@@ -52,7 +54,7 @@ input {
 
 .main-nav a {
   display: block;
-  background: #438bbd;
+  background: #fa4bb1;
   border-radius: 3px;
   padding: 5px;
   color: #fff;
@@ -61,7 +63,8 @@ input {
 .main-nav .active,
 .main-nav a:hover,
 .search-form button:hover {
-  background-color: #275270;
+  background-color: #e9b5c9;
+  
 }
 
 .photo-container ul {
@@ -77,16 +80,19 @@ input {
   height: 165px;
   overflow: hidden;
   margin-bottom: 15px;
+  
 }
 
 .photo-container ul img {
   width: 100%;
   transform: scale(1.25);
-  transition: transform 1.25s;
+  transition: transform 1.50s;
+ 
 }
 
 .photo-container li:hover img {
   transform: scale(1.65);
+ 
 }
 
 .photo-container .not-found {
@@ -100,6 +106,7 @@ input {
 
   .photo-container li {
     margin: auto;
+   
   }
 }
 
@@ -121,5 +128,6 @@ input {
   .main-nav li {
     margin: 10px;
     width: 100px;
+    
   }
 }

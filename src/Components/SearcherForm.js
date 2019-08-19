@@ -1,42 +1,45 @@
-//Import the React module, and Component class (named import) from the react package
+// This imports the React Component from the react package
 import React, { Component } from "react";
-//Import with Router method from react-router-dom module
-//allows the form to redirect to a specific route
-//https://reacttraining.com/react-router/core/api/withRouter
+
+
+// Source: https://reacttraining.com/react-router/core/api/withRouter
+// This imports "withRouter" method from react-router-dom module
+// Will allow the form to redirect to a specified route
 import { withRouter } from "react-router-dom";
 
 class SearcherForm extends Component {
     constructor(props) {
-        //execute default constructor - https://www.youtube.com/watch?v=wdXEtKtHFdw
+        // This wii execute the default constructor - https://www.youtube.com/watch?v=wdXEtKtHFdw
         super(props);
     
-        //initial value for state: set searchTerm to empty string
+        // This state sets searchTerm to empty string
         this.state = { searchTerm: '' };
 
-        //bind these two event methods to current state of 'this'
-        //prevents executing the methods on a null 'this'
+        // This will prevents executing the methods on a null 'this'
         this.updateSearchString = this.updateSearchString.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
     
-    //constantly listen to the textbox value, store in state.searchTerm
+    // This listens for an update to the textbox value and stores information in state.searchTerm
     updateSearchString (e) {
         this.setState({searchTerm: e.target.value});
     }
 
     handleSubmit (e) {
-      //do not execute typical actions of the button
+      // This method cancels the event preventing the that default action that belongs to the event from occurring. 
       e.preventDefault();
-      //the text that I enter gets rendered as a search = go to /gallery/(searchstring)
+
+      // This allows for the text that I entered to get rendered as a search 
       this.props.history.push(`/gallery/${this.state.searchTerm}`);
-      //reset button state to normal
+
+      // This will reset button state to normal
       e.currentTarget.reset();
   }
 
     render() {
         return (
-          //render a search form, with a button and input
-          //content is from base HTML page provided from Treehouse
+          // This renders a search form, with a button and input
+          // Information provided from Treehouse
           <form className="search-form" onSubmit={this.handleSubmit}>
             <input type="search" name="search" placeholder="Search" required onChange={this.updateSearchString} className="input" />
             <button className="searchbutton" type="submit">
@@ -50,5 +53,5 @@ class SearcherForm extends Component {
     }
 }
 
-//withRouter - bind action of the form to the router
+// This is the bind action of the form to the router
 export default withRouter(SearcherForm);

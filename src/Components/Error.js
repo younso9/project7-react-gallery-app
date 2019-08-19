@@ -1,6 +1,6 @@
 import React from 'react';
 
-//Error component - home and gallery routes are not reached
+// This Error component shows when HOME/GALLERY can not be reached.
 const Error = () => {
     return (
         <div className="missing-page">

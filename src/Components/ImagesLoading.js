@@ -1,6 +1,6 @@
 import React from 'react';
 
-//Loading Component - show while photos are being acquired
+// This Component - shows Loading message while images are being retrieved
 const ImagesLoading = () => {
     return (
         <div className="item-loading">

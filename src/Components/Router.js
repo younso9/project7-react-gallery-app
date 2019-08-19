@@ -21,16 +21,16 @@ function Router() {
         <nav className="main-nav">
           <ul>
             <li>
-              <NavLink to="/gallery/black%20sand%20beaches">Black Sand Beaches</NavLink>
+              <NavLink to="/gallery/moonlight">Moonlight</NavLink>
             </li>
             <li>
               <NavLink to="/gallery/seashells">Seashells</NavLink>
             </li>
             <li>
-              <NavLink to="/gallery/floetry">Floetry</NavLink>
+              <NavLink to="/gallery/floetry"> Floetry</NavLink>
             </li>
             <li>
-              <NavLink to="/gallery/ocean%20waves">Ocean Waves</NavLink>
+              <NavLink to="/gallery/zen">Zen</NavLink>
             </li>
           </ul>
         </nav>

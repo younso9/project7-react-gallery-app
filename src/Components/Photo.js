@@ -1,6 +1,7 @@
 import React from 'react';
 
-//displays a photo using the src input local
+
+// This displays an image using the src input
 const Photo = ({src}) => {
     return (
         <li>
@@ -8,5 +9,6 @@ const Photo = ({src}) => {
         </li>
     )
 }
+
 
 export default Photo;
