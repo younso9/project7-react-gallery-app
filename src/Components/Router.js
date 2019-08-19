@@ -2,7 +2,7 @@ import React from "react";
 
 // This imports the needed Components from react-router-dom module
 // Resource: https://reacttraining.com/react-router/web/example/url-params
-import { BrowserRouter as MainRouter, Route, Switch, NavLink } from "react-router-dom";
+import { BrowserRouter as MainRouter, Route, NavLink, Switch } from "react-router-dom";
 
 //  This imports Components to be displayed in Router.js Component
 import SearcherForm from './SearcherForm';
