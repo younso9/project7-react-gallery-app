@@ -4,7 +4,7 @@ import React from 'react';
 const ImagesLoading = () => {
     return (
         <div className="item-loading">
-          Please wait a few seconds, page is loading...
+          Hold Please!!! Images are loading...
         </div>
     )
 }

@@ -9,7 +9,7 @@ import { withRouter } from "react-router-dom";
 
 class SearcherForm extends Component {
     constructor(props) {
-        // This wii execute the default constructor - https://www.youtube.com/watch?v=wdXEtKtHFdw
+        // This will execute the default constructor - https://www.youtube.com/watch?v=wdXEtKtHFdw
         super(props);
     
         // This state sets searchTerm to empty string
@@ -53,5 +53,5 @@ class SearcherForm extends Component {
     }
 }
 
-// This is the bind action of the form to the router
+// This is the binding action of the form to the router
 export default withRouter(SearcherForm);
