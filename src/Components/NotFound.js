@@ -1,12 +1,12 @@
 import React from "react";
 
-// NotFound component is reached if there are no search results.
+// NotFound Component is rendered if there are no search results found.
 
 
 const NotFound = () => {
   return (
     <li className="not-found">
-      <h3>No results</h3>
+      <h3>No Results Found</h3>
       <p />
     </li>
   );
