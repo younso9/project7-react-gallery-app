@@ -32,14 +32,13 @@ class SearcherForm extends Component {
       // This allows for the text that I entered to get rendered as a search 
       this.props.history.push(`/gallery/${this.state.searchTerm}`);
 
-      // This will reset button state to normal
+      // This will reset button to normal
       e.currentTarget.reset();
   }
 
     render() {
         return (
           // This renders a search form, with a button and input
-          // Information provided from Treehouse
           <form className="search-form" onSubmit={this.handleSubmit}>
             <input type="search" name="search" placeholder="Search" required onChange={this.updateSearchString} className="input" />
             <button className="searchbutton" type="submit">
@@ -53,5 +52,5 @@ class SearcherForm extends Component {
     }
 }
 
-// This is the binding action of the form to the router
+
 export default withRouter(SearcherForm);

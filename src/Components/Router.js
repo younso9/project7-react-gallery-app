@@ -36,13 +36,13 @@ function Router() {
         </nav>
       </div>
       {
-    // "https://reacttraining.com/react-router/web/example/url-params"
+
     // "https://reacttraining.com/react-router/web/guides/basic-components
     // *Switch routes:
     //     1) home page
     //     2) gallery page (accessible via search and nav links)       
     //     3) Error page - rendered when the above are not assessed (404 delivered)
-    //https://material-ui.com/components/switches/ 
+    //  https://material-ui.com/components/switches/ 
       }
       <Switch>
         <Route exact path="/" component={Home} />
