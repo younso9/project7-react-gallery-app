@@ -1,6 +1,6 @@
 import React from "react";
 
-// NotFound component - reached if search returns 0 results
+// NotFound component is reached if there are no search results.
 
 
 const NotFound = () => {
