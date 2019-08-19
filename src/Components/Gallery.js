@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import the variable apiKey from config.js
+// import the variable apiKey from config.js
 import apiKey from "./config";
 
 //import our Components to be displayed in this render
