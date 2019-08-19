@@ -2,7 +2,16 @@ body {
   text-align: center;
   font-family: 'Papyrus', sans-serif;
   color: #3f4850;
-  background: linear-gradient( black, white);
+  background: linear-gradient( to bottom , black, rgb(246, 56, 151), white); 
+  background-repeat: no-repeat;
+  background-size: 2000px 900px;
+              
+}
+
+.missing-page {
+    display: block;
+    font-size: 60px;
+    color: white;
 }
 
 h2 {
@@ -10,6 +19,17 @@ h2 {
   margin: 52px 0 40px;
   text-transform: capitalize;
   color: #fa4bb1
+}
+
+h3 {
+    display: block;
+    font-size: 6em;
+    color: white;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
 
 ul {

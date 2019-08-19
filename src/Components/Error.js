@@ -4,7 +4,7 @@ import React from 'react';
 const Error = () => {
     return (
         <div className="missing-page">
-          404 error page!
+          404 ~ PAGE NOT FOUND!!!
           
         </div>
     )
