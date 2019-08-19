@@ -47,6 +47,11 @@ a {
   margin: 0 auto 32px;
 }
 
+.item-loading {
+  font-size: 1.5em;
+  color: #d7dbdf;
+}
+
 .search-form button {
   outline: none;
   background-color: #fa4bb1;
