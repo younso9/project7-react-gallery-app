@@ -1,6 +1,6 @@
 import React from "react";
 
-// NotFound Component is rendered if there are no search results found.
+// NotFound Component is rendered if there are no search results found from users inquiry.
 
 
 const NotFound = () => {

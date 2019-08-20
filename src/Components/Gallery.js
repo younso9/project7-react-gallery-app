@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-// import the variable apiKey from config.js
+// This imports the variable apiKey from config.js
 import apiKey from "./config";
 
-//import our Components to be displayed in this render
+// This imports the following Components to be displayed
 import Photo from "./Photo";
 import NotFound from "./NotFound";
 import Loading from "./ImagesLoading";
 
 class Gallery extends Component {
   constructor() {
-    //execute default constructor
+    // This super(); executes the default constructor
     super();
 
-    //default state: photos empty array, isLoading boolean true
+    // This is the default state:  with an empty array of photos
     this.state = {
       photos: [],
       isLoading: true
@@ -38,11 +38,12 @@ class Gallery extends Component {
         console.log("Error fetching and parsing data", error);
       });
   };
+  // Resources
+  // https://www.flickr.com/services/api/misc.urls.html
+  // https://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js
+  
 
-  //https://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js
-  //https://www.flickr.com/services/api/misc.urls.html
-
-  //construct the photo URI for this particular JSON photo item: use the flickr format, display using the Photo Component
+  // This constructs the photo URI for this JSON photo item: using the flickr format, with the Photo Component
   mapJsonToPhotoComponents = (photo, i) => {
     let uri = "";
 
@@ -52,40 +53,40 @@ class Gallery extends Component {
     return <Photo src={uri} key={i} />;
   };
 
-  //when the Gallery component mounts (fully loads), run fetchPhotos to get the photos for params 'type'
-  //type being the text in /gallery/:type
+  // This waits for the Gallery component to fully loads/mount to run "fetchPhotos" to get the photos for params 'type'
   componentDidMount() {
     this.fetchPhotos(this.props.match.params.type);
   }
 
-  //if this page route has changed, fetch the photos for that new type
+  // This runs if this page route has changed and will fetch the photos for that new query type
   componentDidUpdate(prevProps) {
     if (this.props.location.key !== prevProps.location.key) {
       this.fetchPhotos(this.props.match.params.type);
     }
   }
 
+  // Renders the image element into the DOM return a reference to the component
   render() {
     let images = [];
     let content = "";
 
-    //if the photos aren't loading, display the name
+    // This will display the name if the photos aren't loading
     if (!this.state.isLoading) {
       content = "Displaying " + this.props.match.params.type;
     }
-    //if the photos array has content display them
+    // This will display if the photos array has content
     if (this.state.photos.length > 0) {
       images = this.state.photos.map(this.mapJsonToPhotoComponents);
     }
-    //if there are no photos in the array, and the isLoading is false, then this must be an empty search: load NotFound component
+    // This will load "NotFound" if there are no photos in the array, and the isLoading is false
     else if (!this.state.isLoading) {
       images = <NotFound />;
     }
-    //otherwise, display the generic Loading panel
+    // Otherwise this will display the default Loading panel
     else {
       images = <Loading />;
     }
-    //render the photo-container with the content and images variables within
+    // This will render the photo-container with the images and content
     return (
       <div className="photo-container">
         <h2>{content}</h2>

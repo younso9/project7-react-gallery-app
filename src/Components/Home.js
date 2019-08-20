@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Home Component is displayed when there is no search criteria or gallery is loaded
+// Home Component is displayed when there is no search criteria and gallery is loaded
 
 const Home = () => {
 
